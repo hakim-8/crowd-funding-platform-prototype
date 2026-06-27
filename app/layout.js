@@ -2,6 +2,7 @@ import "./tailwind.css";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import BackgroundParticles from "./components/BackgroundParticles";
 
 export const metadata = {
   title: "Jade Fortune | Crowdfunding Platform",
@@ -10,10 +11,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col selection:bg-[#059669] selection:text-[#fdfbf7]">
+    <html lang="en" className="h-full antialiased animate-fade-in">
+      <body className="min-h-full flex flex-col selection:bg-[#059669] selection:text-[#fdfbf7] relative">
+        {/* Base cream background */}
+        <div className="fixed inset-0 bg-[#fdfbf7] -z-20" />
+        {/* Faint emerald dot grid pattern */}
+        <div className="fixed inset-0 bg-dot-pattern pointer-events-none -z-18" />
+        {/* Premium glowing blurred gradient blobs */}
+        <div className="fixed top-[-10%] right-[-10%] w-[50vw] h-[50vw] max-w-[600px] rounded-full bg-[#ecfdf5] opacity-80 blur-3xl pointer-events-none -z-15" />
+        <div className="fixed bottom-[-10%] left-[-10%] w-[60vw] h-[60vw] max-w-[700px] rounded-full bg-[#059669]/5 blur-3xl pointer-events-none -z-15" />
+        
+        <BackgroundParticles />
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow relative z-10">
           {children}
         </main>
         <Footer />

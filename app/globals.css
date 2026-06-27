@@ -18,7 +18,6 @@
 }
 
 body {
-  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-outfit);
 }
@@ -29,5 +28,26 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .bg-diamond-grid-green {
+    position: relative;
+    background-color: #064e3b;
+    overflow: hidden;
+  }
+
+  .bg-diamond-grid-green::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.12;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%23ffffff' stroke-width='0.75' stroke-opacity='0.08'/%3E%3Cpath d='M30 10 L50 30 L30 50 L10 30 Z' fill='%23ffffff' fill-opacity='0.015' stroke='%23ffffff' stroke-width='0.5' stroke-opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 60px 60px;
+  }
+
+  .bg-dot-pattern {
+    background-image: radial-gradient(rgba(5, 150, 105, 0.04) 1.5px, transparent 1.5px);
+    background-size: 32px 32px;
   }
 }

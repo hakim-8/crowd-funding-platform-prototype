@@ -2,16 +2,27 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#064e3b] text-[#fdfbf7]/80 py-12 mt-auto border-t border-[#10b981]/20 relative overflow-hidden">
+    <footer className="bg-diamond-grid-green text-[#fdfbf7]/80 py-12 mt-auto border-t border-[#10b981]/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#10b981] to-[#064e3b]"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '3rem' }}>
           
           <div style={{ gridColumn: '1 / -1', maxWidth: '400px' }} className="mb-4">
             <Link href="/" className="text-2xl font-bold tracking-tighter text-[#fdfbf7] flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded bg-gradient-to-br from-[#10b981] to-[#fdfbf7] text-[#064e3b] flex items-center justify-center font-bold text-lg">
-                J
-              </div>
+              <svg className="w-8 h-8 filter drop-shadow-[0_2px_8px_rgba(16,185,129,0.45)] hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Table (Top Center) */}
+                <path d="M9 9H15L17 2H7L9 9Z" fill="#a7f3d0" />
+                {/* Crown Left */}
+                <path d="M7 2L9 9H2L7 2Z" fill="#34d399" />
+                {/* Crown Right */}
+                <path d="M17 2L15 9H22L17 2Z" fill="#059669" />
+                {/* Pavilion Center */}
+                <path d="M9 9H15L12 22L9 9Z" fill="#10b981" />
+                {/* Pavilion Left */}
+                <path d="M2 9H9L12 22L2 9Z" fill="#065f46" />
+                {/* Pavilion Right */}
+                <path d="M15 9H22L12 22L15 9Z" fill="#047857" />
+              </svg>
               Jade Fortune
             </Link>
             <p className="text-sm leading-relaxed mb-6">

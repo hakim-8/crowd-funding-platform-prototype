@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen bg-[#fffcf8] pb-24">
       {/* Header */}
-      <section className="bg-[#064e3b] py-20 px-4 text-center border-b-[8px] border-[#059669] relative overflow-hidden">
+      <section className="bg-diamond-grid-green py-20 px-4 text-center border-b-[8px] border-[#059669] relative overflow-hidden">
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-[#10b981] opacity-10 blur-3xl"></div>
         <h1 className="text-4xl md:text-6xl font-extrabold text-[#fdfbf7] tracking-tight mb-6 relative z-10">
           Get In Touch

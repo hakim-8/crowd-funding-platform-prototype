@@ -55,9 +55,20 @@ export default function Navbar() {
                 href="/"
                 className="text-2xl font-bold tracking-tighter text-[#064e3b] flex items-center gap-2"
               >
-                <div className="w-8 h-8 rounded bg-gradient-to-br from-[#10b981] to-[#064e3b] text-[#fdfbf7] flex items-center justify-center font-bold text-lg">
-                  J
-                </div>
+                <svg className="w-8 h-8 filter drop-shadow-[0_2px_8px_rgba(16,185,129,0.35)] hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Table (Top Center) */}
+                  <path d="M9 9H15L17 2H7L9 9Z" fill="#a7f3d0" />
+                  {/* Crown Left */}
+                  <path d="M7 2L9 9H2L7 2Z" fill="#34d399" />
+                  {/* Crown Right */}
+                  <path d="M17 2L15 9H22L17 2Z" fill="#059669" />
+                  {/* Pavilion Center */}
+                  <path d="M9 9H15L12 22L9 9Z" fill="#10b981" />
+                  {/* Pavilion Left */}
+                  <path d="M2 9H9L12 22L2 9Z" fill="#065f46" />
+                  {/* Pavilion Right */}
+                  <path d="M15 9H22L12 22L15 9Z" fill="#047857" />
+                </svg>
                 Jade Fortune
               </Link>
             </div>
@@ -157,7 +168,7 @@ export default function Navbar() {
                       activeDropdown === "investor" ? null : "investor",
                     )
                   }
-                  className="flex items-center bg-[#064e3b] text-[#fdfbf7] px-5 py-2.5 rounded-full font-medium hover:bg-[#059669] transition-colors shadow-lg shadow-[#064e3b]/20 gap-1 whitespace-nowrap"
+                  className="flex items-center bg-gradient-to-b from-[#059669] to-[#064e3b] border-b-[3px] border-[#033527] text-[#fdfbf7] px-5 py-2 rounded-full font-medium hover:brightness-110 active:translate-y-[1.5px] active:border-b-[1.5px] transition-all duration-100 shadow-lg shadow-[#064e3b]/10 gap-1 whitespace-nowrap"
                 >
                   Investors
                   <svg
@@ -224,16 +235,16 @@ export default function Navbar() {
                 <div className="border-t border-[#064e3b]/10 pt-3">
                   <span className="text-[#064e3b]/60 text-xs font-bold uppercase tracking-wider px-3">Auditor</span>
                   <div className="grid grid-cols-2 gap-2 mt-2 px-3">
-                    <button onClick={() => openAuth('login', 'auditor')} className="text-sm bg-white border border-[#064e3b]/20 py-2 rounded-lg font-medium text-[#064e3b]">Login</button>
-                    <button onClick={() => openAuth('register', 'auditor')} className="text-sm bg-[#ecfdf5] border border-[#064e3b]/20 py-2 rounded-lg font-medium text-[#064e3b]">Register</button>
+                    <button onClick={() => openAuth('login', 'auditor')} className="text-sm bg-gradient-to-b from-white to-[#fcfaf5] border border-[#064e3b]/20 border-b-[3px] border-b-[#e5dccb] py-2 rounded-lg font-medium text-[#064e3b] active:translate-y-[1px] active:border-b-[1.5px] transition-all duration-100">Login</button>
+                    <button onClick={() => openAuth('register', 'auditor')} className="text-sm bg-gradient-to-b from-[#ecfdf5] to-[#d1fae5] border border-[#064e3b]/10 border-b-[3px] border-b-[#a7f3d0] py-2 rounded-lg font-medium text-[#064e3b] active:translate-y-[1px] active:border-b-[1.5px] transition-all duration-100">Register</button>
                   </div>
                 </div>
 
                 <div className="border-t border-[#064e3b]/10 pt-3">
                   <span className="text-[#064e3b]/60 text-xs font-bold uppercase tracking-wider px-3">Investor</span>
                   <div className="grid grid-cols-2 gap-2 mt-2 px-3 pb-2">
-                    <button onClick={() => openAuth('login', 'investor')} className="text-sm bg-white border border-[#064e3b]/20 py-2 rounded-lg font-medium text-[#064e3b]">Login</button>
-                    <button onClick={() => openAuth('register', 'investor')} className="text-sm bg-[#064e3b] py-2 rounded-lg font-medium text-[#fdfbf7]">Register</button>
+                    <button onClick={() => openAuth('login', 'investor')} className="text-sm bg-gradient-to-b from-white to-[#fcfaf5] border border-[#064e3b]/20 border-b-[3px] border-b-[#e5dccb] py-2 rounded-lg font-medium text-[#064e3b] active:translate-y-[1px] active:border-b-[1.5px] transition-all duration-100">Login</button>
+                    <button onClick={() => openAuth('register', 'investor')} className="text-sm bg-gradient-to-b from-[#059669] to-[#064e3b] border-b-[3px] border-[#033527] py-2 rounded-lg font-medium text-[#fdfbf7] active:translate-y-[1px] active:border-b-[1.5px] transition-all duration-100">Register</button>
                   </div>
                 </div>
               </div>

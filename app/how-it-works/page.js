@@ -2,7 +2,7 @@ export default function HowItWorks() {
   return (
     <div className="flex flex-col min-h-screen bg-[#fdfbf7] pb-24">
       {/* Header */}
-      <section className="bg-[#064e3b] py-20 px-4 text-center border-b-[8px] border-[#059669]">
+      <section className="bg-diamond-grid-green py-20 px-4 text-center border-b-[8px] border-[#059669] relative overflow-hidden">
         <h1 className="text-4xl md:text-6xl font-extrabold text-[#fdfbf7] tracking-tight mb-6">
           How Crowdfunding Works
         </h1>

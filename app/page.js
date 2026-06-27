@@ -9,7 +9,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[#fdfbf7] bg-opacity-90"></div>
           {/* Decorative blurs */}
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-[#ecfdf5] opacity-70 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-[#059669]-100 opacity-50 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-[#059669]/10 opacity-50 blur-3xl"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,13 +35,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
                 <Link 
                   href="/how-it-works" 
-                  className="w-full sm:w-auto px-8 py-4 bg-[#064e3b] text-[#fdfbf7] rounded-full font-bold text-lg hover:bg-[#059669] transition-all shadow-lg hover:shadow-[#059669]/30 hover:-translate-y-1 text-center"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-b from-[#059669] to-[#064e3b] border-b-[4px] border-[#033527] text-[#fdfbf7] rounded-full font-bold text-lg hover:brightness-110 active:translate-y-[2px] active:border-b-[2px] transition-all duration-100 shadow-lg hover:shadow-[#059669]/10 text-center"
                 >
                   Learn How It Works
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="w-full sm:w-auto px-8 py-4 bg-white text-[#064e3b] border border-[#059669]/20 rounded-full font-bold text-lg hover:bg-[#ecfdf5] transition-all hover:-translate-y-1 text-center"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-b from-white to-[#fcfaf5] text-[#064e3b] border border-[#059669]/20 border-b-[4px] border-b-[#e5dccb] rounded-full font-bold text-lg hover:bg-[#ecfdf5] active:translate-y-[2px] active:border-b-[2px] transition-all duration-100 text-center"
                 >
                   Contact Us
                 </Link>
