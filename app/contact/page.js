@@ -1,9 +1,12 @@
+import Link from 'next/link';
+
 export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen bg-[#fffcf8] pb-24">
       {/* Header */}
-      <section className="bg-diamond-grid-green py-20 px-4 text-center border-b-[8px] border-[#059669] relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-[#10b981] opacity-10 blur-3xl"></div>
+      <section className="bg-[#064e3b] py-20 px-4 text-center border-b-[8px] border-[#059669] relative overflow-hidden">
+        <div className="absolute inset-0 bg-dot-pattern opacity-30 mix-blend-overlay"></div>
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-[#10b981] opacity-20 blur-3xl"></div>
         <h1 className="text-4xl md:text-6xl font-extrabold text-[#fdfbf7] tracking-tight mb-6 relative z-10">
           Get In Touch
         </h1>
@@ -14,6 +17,14 @@ export default function Contact() {
 
       {/* Content */}
       <section className="max-w-6xl mx-auto px-4 w-full mt-16">
+        
+        {/* FAQ Link Banner */}
+        <div className="bg-[#ecfdf5] border border-[#34d399]/30 rounded-2xl p-6 text-center mb-12 shadow-sm">
+          <p className="text-[#064e3b] font-medium">
+            Looking for quick answers? <Link href="/faq" className="font-bold text-[#059669] hover:underline ml-2">Check our comprehensive FAQ section &rarr;</Link>
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
           {/* Contact Details */}
@@ -28,7 +39,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold text-lg text-[#064e3b]">Phone</h3>
                   <p className="text-[#064e3b]/70">+1 (555) 123-4567</p>
-                  <p className="text-sm text-[#064e3b]/50 mt-1">Mon-Fri from 8am to 5pm.</p>
+                  <p className="text-sm text-[#064e3b]/50 mt-1">Mon-Fri from 8am to 5pm (EST).</p>
                 </div>
               </div>
 
@@ -39,7 +50,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold text-lg text-[#064e3b]">Email</h3>
                   <p className="text-[#064e3b]/70">support@jadefortune.com</p>
-                  <p className="text-sm text-[#064e3b]/50 mt-1">We'll respond within 24 hours.</p>
+                  <p className="text-sm text-[#064e3b]/50 mt-1">We respond within 24 hours on business days.</p>
                 </div>
               </div>
 
@@ -54,7 +65,23 @@ export default function Contact() {
               </div>
             </div>
             
-            <div className="mt-12 p-6 bg-[#ecfdf5] rounded-2xl border border-[#059669]/10">
+            {/* Social Links */}
+            <div className="mt-12 pt-8 border-t border-[#059669]/10">
+              <h3 className="font-semibold text-lg text-[#064e3b] mb-4">Connect with us</h3>
+              <div className="flex gap-4">
+                <a href="#" className="w-10 h-10 rounded-full bg-white border border-[#f2eadb] flex items-center justify-center text-[#059669] hover:bg-[#059669] hover:text-white transition-colors shadow-sm">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="#" className="w-10 h-10 rounded-full bg-white border border-[#f2eadb] flex items-center justify-center text-[#059669] hover:bg-[#059669] hover:text-white transition-colors shadow-sm">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="#" className="w-10 h-10 rounded-full bg-white border border-[#f2eadb] flex items-center justify-center text-[#059669] hover:bg-[#059669] hover:text-white transition-colors shadow-sm">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-8 p-6 bg-[#ecfdf5] rounded-2xl border border-[#059669]/10">
               <h4 className="font-bold text-[#064e3b] mb-2">Are you an auditor?</h4>
               <p className="text-sm text-[#064e3b]/80 mb-4">We are always expanding our network of certified independent auditors.</p>
               <a href="#" className="text-[#059669] font-semibold hover:underline">Apply to be an auditor &rarr;</a>
@@ -96,12 +123,19 @@ export default function Contact() {
 
               <div>
                 <label className="block text-sm font-medium text-[#064e3b] mb-2">Subject</label>
-                <select className="w-full px-4 py-3 rounded-xl border border-[#064e3b]/20 bg-[#fffcf8] text-[#064e3b] focus:outline-none focus:ring-2 focus:ring-[#059669] transition-all appearance-none cursor-pointer">
-                  <option>General Inquiry</option>
-                  <option>Investment Question</option>
-                  <option>Project Submission</option>
-                  <option>Technical Support</option>
-                </select>
+                <div className="relative">
+                  <select className="w-full px-4 py-3 rounded-xl border border-[#064e3b]/20 bg-[#fffcf8] text-[#064e3b] focus:outline-none focus:ring-2 focus:ring-[#059669] transition-all appearance-none cursor-pointer">
+                    <option value="" disabled defaultValue>Select a subject</option>
+                    <option>General Inquiry</option>
+                    <option>Creator Support</option>
+                    <option>Backer Support</option>
+                    <option>Press Inquiry</option>
+                    <option>Partnerships</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#064e3b]">
+                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                  </div>
+                </div>
               </div>
 
               <div>

@@ -47,7 +47,10 @@ body {
   }
 
   .bg-dot-pattern {
-    background-image: radial-gradient(rgba(5, 150, 105, 0.04) 1.5px, transparent 1.5px);
+    background-image: radial-gradient(
+      rgba(5, 150, 105, 0.04) 1.5px,
+      transparent 1.5px
+    );
     background-size: 32px 32px;
   }
 }

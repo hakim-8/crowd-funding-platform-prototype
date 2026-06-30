@@ -34,9 +34,13 @@ export default function Footer() {
             <h3 className="text-[#fdfbf7] font-semibold mb-4 tracking-wide uppercase text-sm">Platform</h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/" className="hover:text-[#10b981] transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#10b981] transition-colors">About Us</Link></li>
               <li><Link href="/how-it-works" className="hover:text-[#10b981] transition-colors">How It Works</Link></li>
+              <li><Link href="/pricing" className="hover:text-[#10b981] transition-colors">Pricing & Fees</Link></li>
+              <li><Link href="/projects" className="hover:text-[#10b981] transition-colors">Discover Projects</Link></li>
+              <li><Link href="/faq" className="hover:text-[#10b981] transition-colors">FAQ</Link></li>
+              <li><Link href="/trust-and-safety" className="hover:text-[#10b981] transition-colors">Trust & Safety</Link></li>
               <li><Link href="/contact" className="hover:text-[#10b981] transition-colors">Contact</Link></li>
-              <li><a href="#" className="hover:text-[#10b981] transition-colors">Our Campaigns</a></li>
             </ul>
           </div>
 
@@ -46,6 +50,7 @@ export default function Footer() {
               <li><a href="#" className="hover:text-[#10b981] transition-colors">Terms of Service</a></li>
               <li><a href="#" className="hover:text-[#10b981] transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-[#10b981] transition-colors">Cookie Policy</a></li>
+              <li><a href="#" className="hover:text-[#10b981] transition-colors">Risk Disclosure</a></li>
             </ul>
           </div>
 

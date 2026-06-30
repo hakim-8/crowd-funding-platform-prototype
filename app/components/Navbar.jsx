@@ -107,13 +107,74 @@ export default function Navbar() {
               >
                 How It Works
               </Link>
-              <Link
-                href="/contact"
-                style={{ color: "#064e3b" }}
-                className="font-medium transition-colors hover:opacity-80 whitespace-nowrap"
-              >
-                Contact
-              </Link>
+              
+              {/* More Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() =>
+                    setActiveDropdown(
+                      activeDropdown === "more" ? null : "more",
+                    )
+                  }
+                  style={{ color: "#064e3b" }}
+                  className="flex items-center font-medium transition-colors hover:opacity-80 gap-1 whitespace-nowrap"
+                >
+                  More
+                  <svg
+                    className={`w-4 h-4 transition-transform ${activeDropdown === "more" ? "rotate-180" : ""}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
+
+                {activeDropdown === "more" && (
+                  <div className="absolute left-0 mt-2 w-48 bg-[#fdfbf7] border border-[#059669]/10 rounded-xl shadow-xl py-2 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
+                    <Link
+                      href="/about"
+                      onClick={() => setActiveDropdown(null)}
+                      className="block w-full text-left px-4 py-2 text-sm text-[#064e3b] hover:bg-[#ecfdf5] hover:text-[#059669] transition-colors"
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      href="/pricing"
+                      onClick={() => setActiveDropdown(null)}
+                      className="block w-full text-left px-4 py-2 text-sm text-[#064e3b] hover:bg-[#ecfdf5] hover:text-[#059669] transition-colors"
+                    >
+                      Pricing & Fees
+                    </Link>
+                    <Link
+                      href="/faq"
+                      onClick={() => setActiveDropdown(null)}
+                      className="block w-full text-left px-4 py-2 text-sm text-[#064e3b] hover:bg-[#ecfdf5] hover:text-[#059669] transition-colors"
+                    >
+                      FAQ
+                    </Link>
+                    <Link
+                      href="/trust-and-safety"
+                      onClick={() => setActiveDropdown(null)}
+                      className="block w-full text-left px-4 py-2 text-sm text-[#064e3b] hover:bg-[#ecfdf5] hover:text-[#059669] transition-colors"
+                    >
+                      Trust & Safety
+                    </Link>
+                    <Link
+                      href="/contact"
+                      onClick={() => setActiveDropdown(null)}
+                      className="block w-full text-left px-4 py-2 text-sm text-[#064e3b] hover:bg-[#ecfdf5] hover:text-[#059669] transition-colors"
+                    >
+                      Contact
+                    </Link>
+                  </div>
+                )}
+              </div>
 
               {/* Auditor Dropdown */}
               <div className="relative">
@@ -223,6 +284,35 @@ export default function Navbar() {
                   onClick={() => setActiveDropdown(null)}
                 >
                   How It Works
+                </Link>
+                <div className="border-t border-[#064e3b]/10 my-1"></div>
+                <Link
+                  href="/about"
+                  className="text-[#064e3b] font-medium py-2 hover:bg-[#ecfdf5] px-3 rounded-lg"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="text-[#064e3b] font-medium py-2 hover:bg-[#ecfdf5] px-3 rounded-lg"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  Pricing & Fees
+                </Link>
+                <Link
+                  href="/faq"
+                  className="text-[#064e3b] font-medium py-2 hover:bg-[#ecfdf5] px-3 rounded-lg"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  FAQ
+                </Link>
+                <Link
+                  href="/trust-and-safety"
+                  className="text-[#064e3b] font-medium py-2 hover:bg-[#ecfdf5] px-3 rounded-lg"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  Trust & Safety
                 </Link>
                 <Link
                   href="/contact"
