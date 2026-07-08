@@ -1,9 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Custom properties handled natively or in tailwind.config.js */
-:root {
+@theme {
   --color-brand-cream: #fdfbf7;
   --color-brand-cream-light: #fffcf8;
   --color-brand-cream-dark: #f2eadb;
@@ -12,6 +9,9 @@
   --color-brand-emerald-light: #10b981;
   --color-brand-emerald-50: #ecfdf5;
   --font-outfit: "Outfit", sans-serif;
+}
+
+:root {
 
   --background: var(--color-brand-cream);
   --foreground: var(--color-brand-emerald-dark);

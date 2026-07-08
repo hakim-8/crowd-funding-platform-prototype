@@ -76,7 +76,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
                 <Link
                   href="/projects"
-                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-b from-[#059669] to-[#064e3b] border-b-[4px] border-[#033527] text-[#fdfbf7] rounded-full font-bold text-lg hover:brightness-110 active:translate-y-[2px] active:border-b-[2px] transition-all duration-100 shadow-lg hover:shadow-[#059669]/10 text-center"
+                  className="w-full sm:w-auto px-8 py-4 bg-emerald-900 border-b-[4px] border-emerald-950 text-white rounded-full font-bold text-lg hover:brightness-110 active:translate-y-[2px] active:border-b-[2px] transition-all duration-100 shadow-lg hover:shadow-emerald-600/10 text-center"
                 >
                   Browse Projects
                 </Link>
