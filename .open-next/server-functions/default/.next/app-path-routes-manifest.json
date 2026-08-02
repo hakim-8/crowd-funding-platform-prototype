@@ -1,0 +1,19 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/webhooks/clerk/route": "/api/webhooks/clerk",
+  "/contact/page": "/contact",
+  "/faq/page": "/faq",
+  "/favicon.ico/route": "/favicon.ico",
+  "/how-it-works/page": "/how-it-works",
+  "/investor-portal/page": "/investor-portal",
+  "/investor/sign-in/[[...sign-in]]/page": "/investor/sign-in/[[...sign-in]]",
+  "/investor/sign-up/[[...sign-up]]/page": "/investor/sign-up/[[...sign-up]]",
+  "/issuer-portal/page": "/issuer-portal",
+  "/issuer/sign-in/[[...sign-in]]/page": "/issuer/sign-in/[[...sign-in]]",
+  "/issuer/sign-up/[[...sign-up]]/page": "/issuer/sign-up/[[...sign-up]]",
+  "/page": "/",
+  "/pricing/page": "/pricing",
+  "/trust-and-safety/page": "/trust-and-safety"
+}

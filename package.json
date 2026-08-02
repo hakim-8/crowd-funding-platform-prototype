@@ -12,17 +12,19 @@
     "@clerk/nextjs": "^7.6.4",
     "@supabase/supabase-js": "^2.110.2",
     "bcrypt": "^6.0.0",
-    "next": "16.2.9",
+    "next": "^16.2.12",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "svix": "^1.99.1"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "26.1.2",
     "@types/react": "19.2.18",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "wrangler": "^4.118.0"
   }
 }
