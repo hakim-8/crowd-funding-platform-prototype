@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 import { Webhook } from "svix";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { supabaseAdmin } from "../../../../lib/supabase";
