@@ -26,7 +26,7 @@ export default function Footer() {
               Jade Fortune
             </Link>
             <p className="text-sm leading-relaxed mb-6">
-              Pioneering the future of crowdfunding. We connect visionary projects with auditors and investors globally, ensuring transparency and success.
+              Pioneering the future of crowdfunding. We connect visionary projects with issuers and investors globally, ensuring transparency and success.
             </p>
           </div>
 

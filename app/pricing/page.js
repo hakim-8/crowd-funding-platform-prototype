@@ -63,7 +63,7 @@ export default function Pricing() {
                       Audit Fee (Optional)
                     </h3>
                     <p className="text-sm text-[#064e3b]/70">
-                      Paid to independent auditors for the verification badge.
+                      Paid to independent issuers for the verification badge.
                     </p>
                   </div>
                 </div>

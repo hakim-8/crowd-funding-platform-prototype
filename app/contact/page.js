@@ -82,9 +82,9 @@ export default function Contact() {
             </div>
 
             <div className="mt-8 p-6 bg-[#ecfdf5] rounded-2xl border border-[#059669]/10">
-              <h4 className="font-bold text-[#064e3b] mb-2">Are you an auditor?</h4>
-              <p className="text-sm text-[#064e3b]/80 mb-4">We are always expanding our network of certified independent auditors.</p>
-              <a href="#" className="text-[#059669] font-semibold hover:underline">Apply to be an auditor &rarr;</a>
+              <h4 className="font-bold text-[#064e3b] mb-2">Are you an issuer?</h4>
+              <p className="text-sm text-[#064e3b]/80 mb-4">We are always expanding our network of certified independent issuers.</p>
+              <a href="#" className="text-[#059669] font-semibold hover:underline">Apply to be an issuer &rarr;</a>
             </div>
           </div>
 

@@ -82,8 +82,8 @@ export default function HowItWorks() {
               </h2>
               <p className="text-[#064e3b]/80 leading-relaxed text-lg">
                 {activeTab === "backers"
-                  ? "Browse through a curated selection of visionary projects. Every project on Jade Fortune has passed a rigorous audit, meaning you can review financial projections, auditor notes, and team backgrounds before making a commitment."
-                  : "Submit your project to Jade Fortune. Before any project is listed, it must undergo a comprehensive vetting process by our certified independent auditors who evaluate financial viability, team background, and feasibility."}
+                  ? "Browse through a curated selection of visionary projects. Every project on Jade Fortune has passed a rigorous audit, meaning you can review financial projections, issuer notes, and team backgrounds before making a commitment."
+                  : "Submit your project to Jade Fortune. Before any project is listed, it must undergo a comprehensive vetting process by our certified independent issuers who evaluate financial viability, team background, and feasibility."}
               </p>
             </div>
           </div>

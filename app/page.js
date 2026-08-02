@@ -69,7 +69,7 @@ export default function Home() {
               </h1>
               <p className="mt-4 max-w-2xl mx-auto lg:mx-0 text-xl text-[#064e3b]/80 mb-10 leading-relaxed">
                 Discover and fund transformative projects. A secure platform
-                connecting visionary creators, diligent auditors, and passionate
+                connecting visionary creators, diligent issuers, and passionate
                 investors.
               </p>
 
@@ -103,7 +103,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="p-6 bg-gradient-to-br from-white to-[#fdfbf7] rounded-2xl border border-[#059669]/10 shadow-sm text-center transform transition-transform hover:-translate-y-1 duration-300 translate-y-4">
+                <div className="p-6 bg-gradient-to-br from-white to-[#fdfbf7] rounded-2xl border border-[#059669]/10 shadow-sm text-center transform transition-transform hover:-translate-y-1 duration-300">
                   <p className="text-4xl font-extrabold text-[#059669] mb-2">
                     <AnimatedNumber end={1200} suffix="+" />
                   </p>
@@ -112,7 +112,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="p-6 bg-gradient-to-br from-white to-[#fdfbf7] rounded-2xl border border-[#059669]/10 shadow-sm text-center transform transition-transform hover:-translate-y-1 duration-300 -translate-y-4">
+                <div className="p-6 bg-gradient-to-br from-white to-[#fdfbf7] rounded-2xl border border-[#059669]/10 shadow-sm text-center transform transition-transform hover:-translate-y-1 duration-300">
                   <p className="text-4xl font-extrabold text-[#059669] mb-2">
                     <AnimatedNumber end={250} suffix="k+" />
                   </p>
@@ -126,7 +126,7 @@ export default function Home() {
                     <AnimatedNumber end={100} suffix="%" />
                   </p>
                   <p className="text-xs font-bold text-[#064e3b]/70 uppercase tracking-wider">
-                    Audited Projects
+                    Issuer Projects
                   </p>
                 </div>
               </div>
@@ -316,14 +316,14 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* For Auditors */}
+            {/* For Issuers */}
             <div className="bg-white p-10 rounded-3xl shadow-lg shadow-[#059669]/5 border border-[#f2eadb] relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#ecfdf5] rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
               <h3 className="text-2xl font-bold text-[#064e3b] mb-6 relative z-10 flex items-center gap-3">
                 <span className="w-10 h-10 rounded-full bg-[#059669] text-white flex items-center justify-center text-xl">
                   🔍
                 </span>
-                For Auditors
+                For Issuers
               </h3>
               <ul className="space-y-4 relative z-10">
                 <li className="flex items-start gap-3 text-[#064e3b]/80">
