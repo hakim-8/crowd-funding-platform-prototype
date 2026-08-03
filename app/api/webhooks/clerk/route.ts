@@ -68,13 +68,17 @@ export async function POST(req: Request) {
         email,
         first_name: firstName,
         last_name: lastName,
+        role: role || 'user',
       };
 
-      if (role === "investor") {
-        const { error } = await supabaseAdmin.from("investors").insert([data]);
+      const { error: userError } = await supabaseAdmin.from('users').insert([data]);
+      if (userError) throw userError;
+
+      if (role === 'investor') {
+        const { error } = await supabaseAdmin.from('investors').insert([{ user_id: id }]);
         if (error) throw error;
-      } else if (role === "issuer") {
-        const { error } = await supabaseAdmin.from("issuers").insert([data]);
+      } else if (role === 'issuer') {
+        const { error } = await supabaseAdmin.from('issuers').insert([{ user_id: id }]);
         if (error) throw error;
       }
     }
@@ -88,36 +92,24 @@ export async function POST(req: Request) {
       const firstName = first_name || "";
       const lastName = last_name || "";
 
-      const data = {
+      const data: any = {
         email,
         first_name: firstName,
         last_name: lastName,
       };
 
-      if (role === "investor") {
-        const { error } = await supabaseAdmin
-          .from("investors")
-          .update(data)
-          .eq("user_id", id);
-        if (error) throw error;
-      } else if (role === "issuer") {
-        const { error } = await supabaseAdmin
-          .from("issuers")
-          .update(data)
-          .eq("user_id", id);
-        if (error) throw error;
-      } else {
-        // Fallback: try both if role isn't clear
-        await supabaseAdmin.from("investors").update(data).eq("user_id", id);
-        await supabaseAdmin.from("issuers").update(data).eq("user_id", id);
+      if (role) {
+        data.role = role;
       }
+
+      const { error } = await supabaseAdmin.from('users').update(data).eq('user_id', id);
+      if (error) throw error;
     }
 
-    if (eventType === "user.deleted") {
+    if (eventType === 'user.deleted') {
       const { id } = evt.data;
       if (id) {
-        await supabaseAdmin.from("investors").delete().eq("user_id", id);
-        await supabaseAdmin.from("issuers").delete().eq("user_id", id);
+        await supabaseAdmin.from('users').delete().eq('user_id', id);
       }
     }
 

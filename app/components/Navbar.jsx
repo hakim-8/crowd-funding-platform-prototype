@@ -2,12 +2,14 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { useAuth, UserButton } from "@clerk/nextjs";
+import { useAuth, UserButton, useUser } from "@clerk/nextjs";
 
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const navRef = useRef(null);
   const { isSignedIn } = useAuth();
+  const { user } = useUser();
+  const role = user?.publicMetadata?.role || user?.unsafeMetadata?.role;
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -166,8 +168,8 @@ export default function Navbar() {
 
               {isSignedIn && (
                 <div className="flex items-center gap-4">
-                  <Link href="/investor-portal" className="text-sm font-medium text-[#064e3b] hover:underline">Investor Portal</Link>
-                  <Link href="/issuer-portal" className="text-sm font-medium text-[#064e3b] hover:underline">Issuer Portal</Link>
+                  {role === "investor" && <Link href="/investor-portal" className="text-sm font-medium text-[#064e3b] hover:underline">Investor Portal</Link>}
+                  {role === "issuer" && <Link href="/issuer-portal" className="text-sm font-medium text-[#064e3b] hover:underline">Issuer Portal</Link>}
                   <UserButton afterSignOutUrl="/" />
                 </div>
               )}
@@ -209,8 +211,8 @@ export default function Navbar() {
                 
                 {isSignedIn && (
                   <div className="border-t border-[#064e3b]/10 pt-3 flex flex-col space-y-2 px-3 pb-2">
-                    <Link href="/investor-portal" className="text-sm font-medium text-[#064e3b]">Investor Portal</Link>
-                    <Link href="/issuer-portal" className="text-sm font-medium text-[#064e3b]">Issuer Portal</Link>
+                    {role === "investor" && <Link href="/investor-portal" className="text-sm font-medium text-[#064e3b]">Investor Portal</Link>}
+                    {role === "issuer" && <Link href="/issuer-portal" className="text-sm font-medium text-[#064e3b]">Issuer Portal</Link>}
                     <div className="pt-2"><UserButton afterSignOutUrl="/" /></div>
                   </div>
                 )}

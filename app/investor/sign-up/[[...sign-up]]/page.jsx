@@ -1,6 +1,19 @@
-import { SignUp } from "@clerk/nextjs";
+"use client";
+
+import { SignUp, useAuth } from "@clerk/nextjs";
 
 export default function InvestorSignUpPage() {
+  const { isLoaded, isSignedIn } = useAuth();
+
+  if (!isLoaded || isSignedIn) {
+    return (
+      <div className="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center bg-[#fdfbf7] gap-4">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#064e3b]"></div>
+        <p className="text-[#064e3b] font-medium animate-pulse">Setting up your profile...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-[#fdfbf7]">
       <div className="flex flex-col items-center">

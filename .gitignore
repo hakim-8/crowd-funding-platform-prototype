@@ -4,6 +4,9 @@
 .open-next/
 .wrangler/
 
+#Project Specs
+project-spec.md
+
 # dependencies
 /node_modules
 /.pnp

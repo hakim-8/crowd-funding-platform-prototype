@@ -19,20 +19,7 @@ export default clerkMiddleware(async (auth, req) => {
     return NextResponse.redirect(signInUrl);
   }
 
-  // Handle role boundaries
-  if (userId) {
-    const role = (sessionClaims?.metadata as any)?.role;
-
-    if (isIssuerPortal(req) && role === "investor") {
-      const redirectUrl = new URL("/investor-portal", req.url);
-      return NextResponse.redirect(redirectUrl);
-    }
-
-    if (isInvestorPortal(req) && role === "issuer") {
-      const redirectUrl = new URL("/issuer-portal", req.url);
-      return NextResponse.redirect(redirectUrl);
-    }
-  }
+  // Handle role boundaries using layouts instead (JWT does not contain publicMetadata by default)
 
   return NextResponse.next();
 });
