@@ -1,5 +1,6 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import { createClient } from "@supabase/supabase-js";
 
 export default async function InvestorPortalLayout({ children }) {
   const user = await currentUser();
@@ -16,9 +17,25 @@ export default async function InvestorPortalLayout({ children }) {
   }
 
   // If role is missing (edge case) or 'investor', allow them to proceed.
-  // Real apps might block missing roles, but for now we allow missing or 'investor'.
   if (role !== "investor" && role !== undefined) {
     redirect("/");
+  }
+
+  // Check if DB sync is complete
+  const supabaseAdmin = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_KEY
+  );
+
+  const { data } = await supabaseAdmin
+    .from("users")
+    .select("user_id")
+    .eq("user_id", user.id)
+    .single();
+
+  if (!data) {
+    // Webhook hasn't completed yet, send them to sign-in page to poll
+    redirect("/investor/sign-in");
   }
 
   return <>{children}</>;

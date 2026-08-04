@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useAuth, UserButton, useUser } from "@clerk/nextjs";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -10,6 +11,12 @@ export default function Navbar() {
   const { isSignedIn } = useAuth();
   const { user } = useUser();
   const role = user?.publicMetadata?.role || user?.unsafeMetadata?.role;
+  const pathname = usePathname();
+
+  // Hide Navbar completely on issuer portal
+  if (pathname?.startsWith("/issuer-portal")) {
+    return null;
+  }
 
   // Close dropdowns when clicking outside
   useEffect(() => {

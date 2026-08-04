@@ -1,6 +1,15 @@
+"use client";
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+  const pathname = usePathname();
+  
+  if (pathname?.startsWith('/issuer-portal')) {
+    return null;
+  }
+  
   return (
     <footer className="bg-diamond-grid-green text-[#fdfbf7]/80 py-12 mt-auto border-t border-[#10b981]/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#10b981] to-[#064e3b]"></div>
